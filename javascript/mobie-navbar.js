@@ -23,7 +23,7 @@ class MobileNavBar{
 
     handleClick(){
         this.navList.classList.toggle(this.activeClass);
-        this.anumateLinks();
+        this.animateLinks();
     }
 
     init(){
