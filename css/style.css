@@ -3,61 +3,49 @@
 *{
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-
-a{
-    color: #FFFFFF;
-    transition: .3s;
     text-decoration: none;
 }
 
-a:hover{
-    opacity: 1;
+body{
+    background-color: #E50914;
 }
 
-.logo{
-    font-size: 18px;
-    /*letter-spacing: 0px;
-    Espaçamento da letra*/
+/* -========== Navbar ==========- */
+
+.fixed-menu{
+    top: 0;
+    left: 0;
+    height: 7vh;
+    width: 100%;
+    z-index: 999;
+    padding: 0 20px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #323232;
+}
+
+.logo img{
+    height: 35px;
+    width: 50px;
+}
+
+a{
+    color: #FFF;
+    transition: 0.5s ease;
+}
+
+a:hover{
+    color: #000;
 }
 
 nav{
-    height: 7vh;
-    padding: 25px;
     display: flex;
     align-items: center;
-    background: #323232;
-    justify-content:space-between;
-}
-
-main{
-    height: 93vh;
-    background-color: #FFFFFF;
-}
-
-.cards{
-    padding: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card img{
-    height: 100px;
-    width: 100px;
-}
-
-.card{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 32px;
-    padding: 2.5rem 2rem;
-    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);;
-
 }
 
 .nav-list{
@@ -69,6 +57,9 @@ main{
     margin-left: 32px;
 }
 
+
+/* -========== Mobile Menu ==========- */
+
 .mobile-menu{
     display: none;
     cursor: pointer;
@@ -78,29 +69,33 @@ main{
     width: 32px;
     height: 2px;
     margin: 5px;
-    background: #FFFFFF;
+    background: #FFF;
 }
 
-@media(max-width: 999px){
+@media(max-width: 1400px){
     body{
         overflow-x: hidden;
     }
+    .index{
+        padding-top: 0px;
+        padding-bottom: 120px;
+        flex-direction: column-reverse;
+    }
     .nav-list{
-        position: absolute;
         top: 7vh;
         right: 0;
         width: 50vw;
         height: 93vh;
+        position: absolute;
         background: #323232;
         align-items: center;
         flex-direction: column;
         transform: translateX(100%);
-        transition: transform .3s ease-in;
+        transition: 0.5s ease;
         justify-content: space-around;
-
     }
     .nav-list li{
-        opacity: 100;
+        opacity: 1;
         margin-left: 0;
     }
     .mobile-menu{
@@ -112,14 +107,222 @@ main{
     transform: translateX(0%);
 }
 
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
+/* -========== Index ==========- */
+
+.index{
+    display: flex;
+    padding: 70px 0px 70px;
+    margin: 0 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.index img {
+    display: block;
+    height: 735px;
+    width: 735px;
+    margin: 32px;
+}
+
+.container-index{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-index h1{
+    display: block;
+    color: #FFF;
+    font-size: 5rem;
+    margin-bottom: 32px;
+    text-align: center;
+    letter-spacing: -0.03em;
+}
+
+.container-index p{
+    color: #FFF;
+    text-align: justify;
+    margin: 32px;
+    padding: 32px;
+    line-height: 175%;
+    font-size: 1.125rem;
+    letter-spacing: -0.03em;
+}
+
+.button{
+    color: #000;
+    display: flex;
+    height: 80px;
+    width: 350px;
+    border-radius: 80px;
+    background-color: #F2F2F2;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    letter-spacing: -0.03em;
+    /*margin: 32px;*/
+}
+
+.roda-pe{
+    color: #FFF;
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 5px;
+}
+
+
+/* -========== User Mesas ==========- */
+
+.user-mesas{
+    padding: 115px 0px 115px;
+}
+
+.user-mesas h1{
+    color: #FFF;
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #000;
+    letter-spacing: -0.03em;
+}
+
+.container-mesas form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.user-name{
+    height: 60px;
+    width: 500px;
+    margin: 60px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.user-number{
+    height: 60px;
+    width: 500px;
+    margin: 60px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.user-button{
+    color: #000;
+    display: flex;
+    height: 80px;
+    width: 350px;
+    border-radius: 40px;
+    background-color: #F2F2F2;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    letter-spacing: -0.03em;
+    margin: 60px;
+}
+
+/* -========== User Index ==========- */
+
+.user-index{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+}
+
+.card img{
+    height: 120px;
+    width: 120px;
+}
+
+.card{
+    padding: 32px;
+    margin-left: 32px;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
+}
+
+.card:first-child{
+    margin-left: 0;
+}
+
+@media(max-width: 1400px){
+    .user-index{
+        padding-top: 90px;
     }
-    to{
-        opacity: 1;
-        transform: translateX(0);
+    .cards{
+        flex-direction: column;
+    }
+
+    .card{
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    .card:last-child{
+        margin-bottom: 0px;
     }
 }
 
+/* -========== User Index ==========- */
+
+.colaborador-index{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+}
+
+.card img{
+    height: 120px;
+    width: 120px;
+}
+
+.card{
+    padding: 32px;
+    margin-left: 32px;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
+}
+
+.card:first-child{
+    margin-left: 0;
+}
+
+@media(max-width: 1400px){
+    .user-index{
+        padding-top: 90px;
+    }
+    .cards{
+        flex-direction: column;
+    }
+
+    .card{
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    .card:last-child{
+        margin-bottom: 0px;
+    }
+}
