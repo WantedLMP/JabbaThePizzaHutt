@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Favicon/Favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/style-cadastro.css">
+    <title>Jabba The Pizza Hutt</title>
+</head>
+<body>
+    <div id="main-container">
+        <h1>Cadastro de Usuário</h1>
+        <form id="register-form">
+            <div class="full-box">
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" placeholder="Digite o Nome do usuário">
+            </div>
+            <div class="half-box">
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="date" name="dataNascimento" id="dataNascimento" placeholder="Digite a Data de Nascimento do usuário">
+            </div>
+            <div class="half-box">
+                <label for="dataContrato">Data de Contratação</label>
+                <input type="date" name="dataContrato" id="dataContrato" placeholder="Digite o Data de Contratação do usuário">
+            </div>
+            <div class="full-box">
+                <label for="funcao">Função</label>
+                <input type="text" name="funcao" id="funcao" placeholder="Escolha a Função do usuário">
+            </div>
+            <div class="half-box">
+                <label for="cpfUser">CPF</label>
+                <input type="text" name="cpfUser" id="cpfUser" placeholder="Digite o CPF do usuário">
+            </div>
+            <div class="half-box">
+                <label for="rgUser">RG</label>
+                <input type="text" name="rgUser" id="rgUser" placeholder="Digite o RG do usuário">
+            </div>
+            <div class="full-box">
+                <label for="emailUser">E-mail</label>
+                <input type="email" name="emailUser" id="emailUser" placeholder="Digite o e-mail do usuário" data-min-length="3">
+            </div>
+            <div class="full-box">
+                <label for="telUser">Telefone</label>
+                <input type="text" name="telUser" id="telUser" placeholder="Digite o Telefone do usuário">
+            </div>
+            <div class="full-box">
+                <label for="dataDemissao">Data de Demissão</label>
+                <input type="date" name="dataDemissao" id="dataDemissao" placeholder="Digite a Data de Demissão do usuário">
+            </div>
+            <div class="half-box">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite a Senha do usuário">
+            </div>
+            <div class="half-box">
+                <label for="passconfirmation">Confirme a Senha</label>
+                <input type="password" name="passconfirmation" id="passconfirmation" placeholder="Confirme a Senha do usuário">
+            </div>
+            <div class="full-box">
+                <input type="checkbox" name="agreement" id="agreement">
+                <label for="agreement" id="agreement-label">Ativo</label>
+            </div>
+            <div class="full-box">
+                <input type="submit" name="btn-submit" value="Cadastrar">
+            </div>
+            <p class="error-validation template"></p>
+    <header class="fixed-menu">
+        <div class="logo">
+            <a href="/index.html"><img src="/Logos/Home.png" alt="Home"></a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">Área do Colaborador</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+        </form>
+    </div>
+    <footer class="roda-pe">
+        <div class="copyright">
+            <p>
+                Copyright © 2021 Jabba The Pizza Hutt. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+    <script src="/javascript/mobie-navbar.js"></script>
+    <script src="/javascript/cadastro-usuario.js"></script>
+</body>
+</html>
