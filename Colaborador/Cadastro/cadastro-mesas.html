@@ -15,10 +15,21 @@
         <form id="register-form">
             <div class="full-box">
                 <label for="mesa">Mesa</label>
-                <input type="text" name="mesa" id="mesa" placeholder="Digite o nome da Mesa a ser Cadastrada">
+                <input type="text" name="mesa" id="mesa" placeholder="Digite o nome e o n° da Mesa. Exemp: Mesa XX">
             </div>
             <div class="full-box">
-                <input type="submit" name="btn-submit" value="Cadastrar">
+                <label for="cadeiras">Lugares</label>
+                <input type="number" name="cadeiras" id="cadeiras" placeholder="Digite o Número de Lugares">
+            </div>
+            <div class="full-box">
+                <input type="checkbox" name="agreement" id="agreement">
+                <label for="agreement" id="agreement-label">Ativa</label>
+            </div>
+            <div class="full-box">
+                <input type="submit" name="btn-submit" value="Confirmar">
+            </div>
+            <div class="full-box">
+                <a class="login-reset" href="#">Cancelar</a>
             </div>
             <p class="error-validation template"></p>
     <header class="fixed-menu">
@@ -39,11 +50,6 @@
         </form>
     </div>
     <footer class="roda-pe">
-        <div class="copyright">
-            <p>
-                Copyright © 2021 Jabba The Pizza Hutt. Todos os direitos reservados.
-            </p>
-        </div>
     </footer>
     <script src="/javascript/mobie-navbar.js"></script>
     <script src="/javascript/cadastro-usuario.js"></script>
