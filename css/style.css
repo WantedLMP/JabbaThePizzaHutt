@@ -170,7 +170,6 @@ nav{
     margin: 5px;
 }
 
-
 /* -========== User Mesas ==========- */
 
 .user-mesas{
@@ -245,12 +244,12 @@ nav{
 
 .card{
     display: flex;
+    min-width: 480px;
     text-align: center;
     align-items: center;
     border-radius: 20px;
     padding: 32px;
     margin-left: 32px;
-    max-width: 480px;
     flex-direction: column;
     box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
 }
@@ -281,10 +280,10 @@ nav{
     display: flex;
     align-items: center;
     text-align: center;
-
     flex-direction: column;
     justify-content: center;
 }
+
 .user-garcom h1{
     width: 100%;
     font-size: 2.5rem;
@@ -304,7 +303,7 @@ nav{
     width: 350px;
 }
 
-/* -========== User Garçom ==========- */
+/* -========== User Status ==========- */
 
 .user-status{
     display: flex;
@@ -321,35 +320,6 @@ nav{
     background-color: #000;
     text-transform: uppercase;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* -========== Colaborador Index ==========- */
 
