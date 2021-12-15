@@ -10,7 +10,7 @@
 }
 
 body{
-    background-color: #E50914;
+    background: linear-gradient(90deg, #B31317 0%, #EA1D22 50%, #B31317 100%);
 }
 
 /* -========== Navbar ==========- */
@@ -26,7 +26,8 @@ body{
     position: fixed;
     align-items: center;
     justify-content: space-between;
-    background-color: #323232;
+    background: linear-gradient(90deg, #B31317 0%, #EA1D22 50%, #B31317 100%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .logo img{
@@ -109,9 +110,10 @@ nav{
 /* -========== Index ==========- */
 
 .index{
+    height: 100vh;
+    width: 100%;
     display: flex;
-    padding: 70px 0px 70px;
-    margin: 0 32px;
+    padding-top: 120px;
     align-items: center;
     justify-content: center;
 }
@@ -155,7 +157,7 @@ nav{
     height: 80px;
     width: 350px;
     border-radius: 80px;
-    background-color: #F2F2F2;
+    background-color: #F5F5F5;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
@@ -243,6 +245,7 @@ nav{
 }
 
 .card{
+    color: #000;
     display: flex;
     min-width: 480px;
     text-align: center;
@@ -251,6 +254,7 @@ nav{
     padding: 32px;
     margin-left: 32px;
     flex-direction: column;
+    background: linear-gradient(180deg, #fdfbfb 0%, #ebedee 100%);
     box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
 }
 
@@ -295,20 +299,21 @@ nav{
 
 .user-garcom p{
     font-size: 2rem;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .user-garcom img{
     height: 350px;
     width: 350px;
+    margin-bottom: 20px;
 }
 
 /* -========== User Status ==========- */
 
 .user-status{
-    display: flex;
     height: 100vh;
     width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -320,6 +325,116 @@ nav{
     background-color: #000;
     text-transform: uppercase;
 }
+
+/* -========== User Cardápio ==========- */
+
+.user-cardapio{
+    width: 1400px;
+    padding: 32px;
+    margin: 120px auto;
+    border-radius: 10px;
+    background-color: #FFF;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
+}
+
+.productcont{
+    display: grid;
+    grid-row-gap: 1em;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product img{
+    height: 150px;
+    width: 150px;
+}
+
+.product{
+    padding: 32px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #323232;
+}
+
+.cart-container {
+    padding: 32px;
+    margin-top: 1em;
+    border-radius: 5px;
+    border: 1px solid #323232;
+}
+
+button, input[type="submit"]{ 
+    color:#fff;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 40px;
+    letter-spacing: -0.03em;
+    background-color: #F38630;
+}
+
+button:hover, button:focus, button:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
+    background: #A7DBD8;
+    border-color:#69D2E7;
+    color:#000;
+    cursor: pointer;
+}
+
+table{
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    text-align: left;
+    padding: 0.25em 1em;
+    border-bottom: 1px solid #E0E4CC;
+}
+
+#carttotals {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.cart-buttons {
+    width: auto;
+    margin-right: 0;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+
+#emptycart {
+    margin-right: 1rem;
+}
+
+table td:nth-last-child(1) {
+    text-align: right;
+}
+
+.message {
+    color:#000;
+    font-size: 1rem;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px 0px;
+    border-color:#323232;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+}
+
+.pizzas-salgadas h1{
+    margin-bottom: 32px;
+    text-align: center;
+    border: 1px solid #323232;
+}
+
+.pizzas-doces h1{
+    margin: 32px 0px;
+    text-align: center;
+    border: 1px solid #323232;
+}
+
 
 /* -========== Colaborador Index ==========- */
 
