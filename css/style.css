@@ -40,8 +40,8 @@ a{
     transition: 0.5s ease;
 }
 
-a:hover{
-    color: #000;
+a:hover, a:focus{
+    transform: scale(1.1);
 }
 
 nav{
@@ -77,22 +77,26 @@ nav{
         overflow-x: hidden;
     }
     .index{
-        padding-top: 0px;
-        padding-bottom: 120px;
+        margin-top: 200px;
         flex-direction: column-reverse;
     }
+
+    .button{
+        margin-bottom: 32px;
+    }
+
     .nav-list{
         top: 7vh;
         right: 0;
         width: 50vw;
         height: 93vh;
         position: absolute;
-        background: #323232;
         align-items: center;
         flex-direction: column;
         transform: translateX(100%);
         transition: 0.5s ease;
         justify-content: space-around;
+        background: linear-gradient(0deg, #B31317 0%, #EA1D22 50%, #B31317 100%);
     }
     .nav-list li{
         opacity: 1;
@@ -116,6 +120,7 @@ nav{
     padding-top: 120px;
     align-items: center;
     justify-content: center;
+    animation: go-back 1s ease;
 }
 
 .index img {
@@ -123,6 +128,7 @@ nav{
     height: 735px;
     width: 735px;
     margin: 32px;
+    animation: go-back 1.5s ease;
 }
 
 .container-index{
@@ -139,6 +145,7 @@ nav{
     margin-bottom: 32px;
     text-align: center;
     letter-spacing: -0.03em;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .container-index p{
@@ -149,27 +156,28 @@ nav{
     line-height: 175%;
     font-size: 1.125rem;
     letter-spacing: -0.03em;
+    text-align: center;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .button{
-    color: #000;
+    color: #121E1E;
     display: flex;
     height: 80px;
     width: 350px;
     border-radius: 80px;
-    background-color: #F5F5F5;
+    background-color: #FFE145;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    letter-spacing: -0.03em;
-    /*margin: 32px;*/
+    font-weight: 600;
+    transition: 0.5s ease;
 }
 
-.roda-pe{
-    color: #FFF;
-    font-size: 0.7rem;
-    text-align: center;
-    margin: 5px;
+.button:hover{
+    color: #121E1E;
+    background-color: #F4AE01;
+    transform: scale(1.1);
 }
 
 /* -========== User Mesas ==========- */
@@ -186,8 +194,7 @@ nav{
     margin-bottom: 60px;
     text-align: center;
     text-transform: uppercase;
-    background-color: #000;
-    letter-spacing: -0.03em;
+    background-color: #121E1E;
 }
 
 .container-mesas form{
@@ -195,6 +202,7 @@ nav{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    animation: go-back 1s ease;
 }
 
 .user-name{
@@ -216,17 +224,23 @@ nav{
 }
 
 .user-button{
-    color: #000;
+    color: #121E1E;
     display: flex;
     height: 80px;
     width: 350px;
-    border-radius: 40px;
-    background-color: #F2F2F2;
+    border-radius: 80px;
+    background-color: #FFE145;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    letter-spacing: -0.03em;
-    margin: 60px;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.user-button:hover{
+    color: #121E1E;
+    background-color: #F4AE01;
+    transform: scale(1.1);
 }
 
 /* -========== User Index ==========- */
@@ -237,24 +251,27 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: go-back 1s ease;
 }
 
 .card img{
     height: 120px;
     width: 120px;
+    
 }
 
 .card{
-    color: #000;
+    color: #121E1E;
     display: flex;
-    min-width: 480px;
+    width: 480px;
     text-align: center;
+    font-style: italic;
     align-items: center;
     border-radius: 20px;
     padding: 32px;
     margin-left: 32px;
     flex-direction: column;
-    background: linear-gradient(180deg, #fdfbfb 0%, #ebedee 100%);
+    background-color: #FFF; /* Definir uma cor legal para os cards*/
     box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
 }
 
@@ -290,22 +307,24 @@ nav{
 
 .user-garcom h1{
     width: 100%;
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     margin-bottom: 32px;
-    background-color: #000;
-    letter-spacing: -0.03em;
+    background-color: #121E1E;
     text-transform: uppercase;
 }
 
 .user-garcom p{
     font-size: 2rem;
-    margin-bottom: 20px;
+    font-weight: 900;
+    margin-bottom: 32px;
+    animation: go-back 1s ease;
 }
 
 .user-garcom img{
     height: 350px;
     width: 350px;
     margin-bottom: 20px;
+    animation: go-back-img 1s infinite alternate;
 }
 
 /* -========== User Status ==========- */
@@ -313,17 +332,22 @@ nav{
 .user-status{
     height: 100vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-top: 120px;
+    
 }
 
 .user-status h1{
     width: 100%;
     color: #FFF;
-    letter-spacing: -0.03em;
-    background-color: #000;
+    font-size: 3.5rem;
+    text-align: center;
     text-transform: uppercase;
+    background-color: #121E1E;
+}
+
+.status-pedido{
+    width: 800px;
+    background-color: #FFF;
 }
 
 /* -========== User Cardápio ==========- */
@@ -363,21 +387,24 @@ nav{
     border: 1px solid #323232;
 }
 
-button, input[type="submit"]{ 
-    color:#fff;
+/*button, input[type="submit"]{ 
+    color:#121E1E;
     padding: 10px;
     font-size: 1rem;
-    border-radius: 40px;
+    border-radius: 80px;
+    font-size: 1.5rem;
+    font-weight: 600;
     letter-spacing: -0.03em;
-    background-color: #F38630;
+    background-color: #FFE145;
+    transition: 0.5s ease;
 }
 
 button:hover, button:focus, button:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
-    background: #A7DBD8;
-    border-color:#69D2E7;
-    color:#000;
     cursor: pointer;
-}
+    color: #121E1E;
+    letter-spacing: 2px;
+    background-color: #F4AE01;
+}*/
 
 table{
     margin-bottom: 1rem;
@@ -521,4 +548,35 @@ table td:nth-last-child(1) {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes go-back{
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
+
+@keyframes go-back-img{
+    from {
+      transform: scale(0.75);
+
+    }
+    to {
+      transform: scale(1);
+    }
 }
