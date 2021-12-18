@@ -13,78 +13,111 @@
 <body>
     <div id="main-container">
         <h1>Cadastro de Usuário</h1>
-        <form id="register-form" >
+        <form id="formExemplo" data-toggle="validator" role="form">
             <div class="full-box">
-                <label for="name">Nome</label>
-                <input type="text" name="name" id="name" placeholder="Digite o Nome do usuário"  data-min-length="3">
+                <label for="textNome" class="control-label">Nome</label>
+                <input id="textNome" class="form-control" placeholder="Digite o Nome do usuário" type="text" required>
             </div>
-            <div class="half-box">
-                <label for="dataNascimento">Data de Nascimento</label>
-                <input type="date" name="dataNascimento" id="dataNascimento" placeholder="Digite a Data de Nascimento do usuário">
+
+            <div class="form-group">
+                <label for="dtNasc" class="control-label">Data Nascimento</label>
+                <input id="dtNasc" class="form-control" type="date" 
+                  data-error="Por favor, informe uma data correta." required>
+                <div class="help-block with-errors"></div>
             </div>
-            <div class="half-box">
-                <label for="dataContrato">Data de Contratação</label>
-                <input type="date" name="dataContrato" id="dataContrato" placeholder="Digite o Data de Contratação do usuário">
+
+            <div class="form-group">
+                <label for="dtCont" class="control-label">Data Contratação</label>
+                <input id="dtCont" class="form-control" type="date" 
+                  data-error="Por favor, informe uma data correta." required>
+                <div class="help-block with-errors"></div>
             </div>
+              
             <div class="full-box">
-                <label for="Cargo">Cargo</label>
-                <input type="text" name="cargo" id="cargo" placeholder="Escolha o Cargo do usuário">
+                <label for="funcao" class="control-label">Função</label>
+                <input id="funcao" class="form-control" placeholder="Selecione a função do usuário" type="text" 
+                  data-error="Por favor, selecione uma Função." required>
+                <div class="help-block with-errors"></div>
             </div>
-            <div class="half-box">
-                <label for="cpfUser">CPF</label>
-                <input type="text" name="cpfUser" id="cpfUser" placeholder="Digite o CPF do usuário">
+
+            <div class="form-group">
+                <label for="cpfUser" class="control-label">CPF</label>
+                <input type="cpfUser" class="form-control" id="cpfUser" placeholder="Digite o CPF do usuário"  
+                  data-error="Por favor, informe o CPF correto." required>
+                <div class="help-block with-errors"></div>
             </div>
-            <div class="half-box">
-                <label for="rgUser">RG</label>
-                <input type="text" name="rgUser" id="rgUser" placeholder="Digite o RG do usuário">
+
+            <div class="form-group">
+                <label for="rgUser" class="control-label">RG</label>
+                <input type="rgUser" class="form-control" id="rgUser" placeholder="Digite o RG do usuário"  
+                  data-error="Por favor, informe o RG correto." required>
+                <div class="help-block with-errors"></div>
             </div>
+
             <div class="full-box">
-                <label for="emailUser">E-mail</label>
-                <input type="email" name="emailUser" id="emailUser" placeholder="Digite o e-mail do usuário">
+                <label for="inputEmail" class="control-label">Email</label>
+                <input id="inputEmail" class="form-control" placeholder="Digite o E-mail do usuário" type="email" 
+                  data-error="Por favor, informe um e-mail correto." required>
+                <div class="help-block with-errors"></div>
             </div>
+
             <div class="full-box">
-                <label for="telUser">Telefone</label>
-                <input type="text" name="telUser" id="telUser" placeholder="Digite o Telefone do usuário">
+                <label for="foneUser" class="control-label">Telefone</label>
+                <input id="foneUser" class="form-control" placeholder="Digite o telefone do usuário" type="tel" 
+                  data-error="Por favor, informe um telefone correto." required>
+                <div class="help-block with-errors"></div>
             </div>
-            <div class="half-box">
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="password" placeholder="Digite a Senha do usuário">
+              
+            <div class="form-group">
+                <label for="inputPassword" class="control-label">Senha</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Digite sua Senha..."  
+                  data-minlength="6" required>
             </div>
-            <div class="half-box">
-                <label for="passconfirmation">Confirme a Senha</label>
-                <input type="password" name="passconfirmation" id="passconfirmation" placeholder="Confirme a Senha do usuário">
+              
+            <div class="form-group">
+                <label for="inputConfirm" class="control-label">Confirme a Senha</label>
+                <input type="password" class="form-control" id="inputConfirm" placeholder="Confirme sua Senha..." 
+                  data-match="#inputPassword" data-match-error="Atenção! As senhas não estão iguais." required>
+                <div class="help-block with-errors"></div>
             </div>
+
             <div class="full-box">
                 <input type="checkbox" name="agreement" id="agreement">
                 <label for="agreement" id="agreement-label">Ativo</label>
+                <div class="help-block with-errors"></div>
             </div>
+              
             <div class="full-box">
-                <input type="submit" id="btn-submit" value="Confirmar">
+                <!--<button type="submit" class="btn btn-primary">Confirmar</button> -->
+                <input type="submit" name="btn-submit" value="Confirmar">
             </div>
+
             <div class="full-box">
                 <a class="login-reset" href="#">Cancelar</a>
             </div>
-            <p class="error-validation template"></p>
-    <header class="fixed-menu">
-        <div class="logo">
-            <a href="/index.html"><img src="/Logos/Home.png" alt="Home"></a>
-        </div>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#">Área do Colaborador</a></li>
-            </ul>
-        </nav>
-        <div class="mobile-menu">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </header>
+            
+            <header class="fixed-menu">
+                <div class="logo">
+                    <a href="/index.html"><img src="/Logos/Home.png" alt="Home"></a>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="#">Área do Colaborador</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </header>
         </form>
     </div>
     <footer class="roda-pe">
     </footer>
     <script src="/javascript/mobie-navbar.js"></script>
-    <script src="/javascript/cadastro-usuario.js"></script>
+    <script src="/JavaScript/jquery.js"></script>
+    <script src="/JavaScript/bootstrap.min.js"></script>
+    <script src="/JavaScript/validator.min.js"></script>
 </body>
 </html>
