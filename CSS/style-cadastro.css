@@ -21,6 +21,7 @@ body {
     padding-top: 10vh; /*altura da view*/
     background-size: cover;
     background-position: -150px;
+    padding-bottom: 5vh;
 }
 
 /*form*/
