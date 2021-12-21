@@ -10,7 +10,7 @@
 }
 
 body{
-    background: linear-gradient(90deg, #B31317 0%, #EA1D22 50%, #B31317 100%);
+    background: linear-gradient(90deg, #8E0E00 0%, #B31317 50%, #8E0E00 100%);
 }
 
 /* -========== Navbar ==========- */
@@ -26,7 +26,7 @@ body{
     position: fixed;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(90deg, #B31317 0%, #EA1D22 50%, #B31317 100%);
+    background: linear-gradient(90deg, #8E0E00 0%, #B31317 50%, #8E0E00 100%);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -179,6 +179,7 @@ nav{
     background-color: #F4AE01;
     transform: scale(1.1);
 }
+
 
 /* -========== User Mesas ==========- */
 
